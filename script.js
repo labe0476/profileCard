@@ -18,25 +18,30 @@ fetch(url, fetchData)
     let users = data.users;
     console.log(users);
 
-    allUser.innerHTML = users.map(function (value, index, array) {
+    allUser.innerHTML = users
+      .map(function (value, index, array) {
         return `
     
-            <div class="eachUsers">
-           <span> <img src="${value.image}" alt=""></img> </span>
-    <div>
-      <p>
-
-        <b>Name:</b> ${value.firstName} ${value.middleName} ${value.lastName}
-      </p>
-    </div>
-                 <p><b>Gender: </b>${  value.gender}</p>
-                  <p><b>Address: </b>${ value.address.address}</p>
-                  <p><b>Company: </b>${ value.company.title}</p>
-                  <p><b>Phone: </b>${ value.phone}</p>
-                  <p><b>Email: </b>${ value.email}</p>
+    <div class="eachUsers">
+                <span> <img src="${value.image}" alt=""></img> </span>
+                <hr>
+          <div>
+            <p>
+              <b>Name:</b> ${value.firstName} ${value.middleName} ${value.lastName}
+            </p>
+        
+                    <p><b>Gender: </b>${value.gender}</p>
+                    <p><b>Company: </b>${value.company.title}</p>
+          </div>
+                        <hr>
+          <div>
+                      <p><b>Address: </b>${value.address.address}</p>
+                      <p><b>Phone: </b>${value.phone}</p>
+                      <p class="email"><b>Email: </b>${value.email}</p>
+          </div>
                   
 
-              </div>
+     </div>
           `;
       })
       .join("");
