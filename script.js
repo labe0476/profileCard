@@ -22,18 +22,18 @@ fetch(url, fetchData)
         return `
     
             <div class="eachUsers">
-            <img src="${users.images}" alt=""></img>
+           <span> <img src="${value.image}" alt=""></img> </span>
     <div>
-      <span>
+      <p>
 
-        <b>Name:</b>${users.firstName} ${users.middleName} ${users.lastName}
-      </span>
-    </div>;
-                 <p><b>Gender:</b>${users.gender}</p>
-                  <p><b>Address:</b>${users.address}</p>
-                  <p><b>Company:</b>${users.company}</p>;
-                  <p><b>Phone:</b>${users.phone}</p>
-                  <p><b>Email</b>${users.email}</p>
+        <b>Name:</b> ${value.firstName} ${value.middleName} ${value.lastName}
+      </p>
+    </div>
+                 <p><b>Gender: </b>${  value.gender}</p>
+                  <p><b>Address: </b>${ value.address.address}</p>
+                  <p><b>Company: </b>${ value.company.title}</p>
+                  <p><b>Phone: </b>${ value.phone}</p>
+                  <p><b>Email: </b>${ value.email}</p>
                   
 
               </div>
