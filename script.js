@@ -7,7 +7,7 @@ const fetchData = {
   },
 };
 
-let allUser = document.querySelector("#alluser");
+let allUser = document.querySelector("#allUser");
 
 fetch(url, fetchData)
   .then(function (response) {
